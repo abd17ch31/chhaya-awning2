@@ -5,7 +5,6 @@ import About from "@/pages/About"
 import Services from "@/pages/Services"
 import Gallery from "@/pages/Gallery"
 import Contact from "@/pages/Contact"
-import Hero1 from "@/components/sections/Hero1"
 
 export default function App() {
   return (

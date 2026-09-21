@@ -22,7 +22,7 @@
     "noUncheckedSideEffectImports": true,
 
     /* Path aliases (for vite.config.ts) */
-    "baseUrl": ".",
+  
     "paths": {
       "@/*": ["./src/*"]
     }

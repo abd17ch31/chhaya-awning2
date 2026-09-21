@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
-import { Link, NavLink, useLocation } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
-import { LOGO } from "@/lib/images"
 
 const NAV_LINKS = [
   { label: "Home", to: "/" },
@@ -15,7 +14,6 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
-  const { pathname } = useLocation()
 
   // Detect scroll for glass effect
   useEffect(() => {
@@ -24,9 +22,6 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
-
-  // Close mobile menu on route change
-  useEffect(() => setOpen(false), [pathname])
 
   // Lock body scroll when menu open
   useEffect(() => {
@@ -133,6 +128,7 @@ export default function Navbar() {
                   >
                     <NavLink
                       to={link.to}
+                      onClick={() => setOpen(false)}
                       className={({ isActive }) =>
                         [
                           "block font-display text-3xl py-3 tracking-tight transition-colors",
@@ -149,6 +145,7 @@ export default function Navbar() {
               <div className="mt-auto pt-8">
                 <Link
                   to="/contact"
+                  onClick={() => setOpen(false)}
                   className="flex items-center justify-center rounded-full bg-clay text-primary-foreground px-6 py-4 text-sm font-medium shadow-md hover:bg-clay-dark transition-colors"
                 >
                   Get a Quote

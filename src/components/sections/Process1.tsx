@@ -105,8 +105,8 @@ export default function Process1() {
             className="hidden lg:block absolute top-[90px] left-[12.5%] right-[12.5%] h-px bg-cream/15"
           />
 
-          {STEPS.map((step, i) => (
-            <StepCard key={step.number} step={step} index={i} />
+          {STEPS.map((step) => (
+            <StepCard key={step.number} step={step} />
           ))}
         </motion.div>
 
@@ -131,7 +131,7 @@ export default function Process1() {
   )
 }
 
-function StepCard({ step, index }: { step: Step; index: number }) {
+function StepCard({ step }: { step: Step }) {
   const Icon = step.icon
   return (
     <motion.div

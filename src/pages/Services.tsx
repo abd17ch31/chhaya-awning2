@@ -179,7 +179,7 @@ export default function Services() {
         intro="From a single window awning to a full café canopy — every service starts with a conversation, gets measured on-site, and is stitched in-house."
         image={SERVICES_IMAGES.hero}
         imageAlt="Awning over a storefront"
-        caption={{ label: "Our work", value: "Bandra, Mumbai" }}
+        caption={{ label: "", value: "" }}
         stats={[
           { value: "04", label: "Core services" },
           { value: "3–6", label: "Week turnaround" },

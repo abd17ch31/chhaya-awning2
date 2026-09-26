@@ -1,0 +1,14 @@
+# ─────────────────────────────────────────────
+# Chhaya Awning — robots.txt
+# ─────────────────────────────────────────────
+
+User-agent: *
+Allow: /
+
+# Block admin / draft / internal paths (if added later)
+Disallow: /admin
+Disallow: /api
+Disallow: /draft
+
+# Sitemap
+Sitemap: https://chhayaawning.com/sitemap.xml

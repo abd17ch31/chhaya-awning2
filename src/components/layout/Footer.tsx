@@ -39,7 +39,7 @@ export default function Footer() {
           <div className="lg:col-span-5">
             <Link to="/" className="group inline-flex items-center gap-3 mb-6">
               <img
-                src="/logo.svg"
+                src="/logo.png"
                 alt={SITE.name}
                 className="h-11 w-11 transition-transform duration-500 group-hover:rotate-[8deg]"
               />
